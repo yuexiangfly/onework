@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        @keyframes demo{
+            from{left:0;}
+            to{left:-229px;}
+        }
+        .box{
+            width:100px;
+            height:300px;
+            position:relative;
+            margin:100px auto;
+            border:1px solid #000;
+            overflow:hidden;
+            border-radius:10px;
+        }
+        .content{
+            width:400px;
+            height:300px;
+            position:absolute;
+            left:0;
+            top:0;
+            background:-webkit-repeating-linear-gradient(-45deg,red 0,red 40px,#fff 40px,#fff 80px,blueviolet 80px,blueviolet 120px,#fff 120px,#fff 160px);
+            animation:demo 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+  <div class="box">
+      <div class="content"></div>
+  </div>
+</body>
+</html>

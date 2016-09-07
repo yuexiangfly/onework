@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width:100px;
+            height:300px;
+            border:1px solid #000;
+            position:relative;
+            margin:100px auto;
+            border-radius:10px;
+            overflow:hidden;
+        }
+        .scroll{
+            width:300px;
+            height:300px;
+            position:absolute;
+            left:0;
+            top:0;
+            background:-webkit-repeating-linear-gradient(-45deg,red 0,red 30px,#fff 30px ,#fff 60px,blue 60px ,blue 90px,#fff 90px ,#fff 120px)
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBox = document.querySelector('.box');
+            var oSc = document.querySelector('.scroll');
+            var l=0;
+            setInterval(function(){
+                l--;
+                if(l < -87){
+                   l = 0;
+                }
+                oSc.style.left = l+'px';
+            },30);
+        };
+    </script>
+</head>
+<body>
+   <div class="box">
+       <div class="scroll"></div>
+   </div>
+</body>
+</html>
